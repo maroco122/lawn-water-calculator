@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>잔디밭 물 주기 계산기</title>
+    <script>
+        function calculateWater() {
+            let width = parseFloat(document.getElementById('width').value);
+            let height = parseFloat(document.getElementById('height').value);
+            let waterNeeded = width * height * 5; // 1㎡당 5L 물 필요하다고 가정
+            document.getElementById('result').innerText = `필요한 물의 양: ${waterNeeded} L`;
+            
+            setTimeout(() => {
+                window.location.href = "https://smartstore.naver.com/allgagu/products/11520007137";
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <h2>잔디밭 물 주기 계산기</h2>
+    <label for="width">잔디밭 가로 (m):</label>
+    <input type="number" id="width" step="0.1"><br><br>
+    <label for="height">잔디밭 세로 (m):</label>
+    <input type="number" id="height" step="0.1"><br><br>
+    <button onclick="calculateWater()">계산하기</button>
+    <p id="result"></p>
+</body>
+</html>
